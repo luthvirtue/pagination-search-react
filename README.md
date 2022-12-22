@@ -19,6 +19,6 @@ Frontend Test
 
 2. [React Search](https://github.com/luthvirtue/react-front-test)
 
-3. [Simple Pagination Test] (https://github.com/luthvirtue/pagination-test)
+3. [Simple Pagination Test](https://github.com/luthvirtue/pagination-test)
 
-4. [Pagination Airlines Test] (https://github.com/luthvirtue/react-airlines-test)
+4. [Pagination Airlines Test](https://github.com/luthvirtue/react-airlines-test)
