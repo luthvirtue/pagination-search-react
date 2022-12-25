@@ -9,13 +9,13 @@ import 'react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css
 
 function DataList() {
   const [userList, setUserList] = useState([])
-  const [limit] = useState(10)
+  const [limit] = useState(100)
 
   // Content Display Modifiers
   const columns = [
     {dataField:'name', text:'Name', sort: true, filter: textFilter()},
     {dataField:'email', text:'Email', sort: true, filter: textFilter()},
-    {dataField:'body', text:'Comement', sort: true, filter: textFilter()},
+    {dataField:'body', text:'Comment', sort: true, filter: textFilter()},
     //{dataField:'established', text:'Established Year', sort: true, filter: textFilter()}
   ]
 
