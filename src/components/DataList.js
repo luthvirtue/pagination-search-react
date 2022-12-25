@@ -9,13 +9,14 @@ import 'react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css
 
 function DataList() {
   const [userList, setUserList] = useState([])
+  const [limit] = useState(10)
 
   // Content Display Modifiers
   const columns = [
     {dataField:'name', text:'Name', sort: true, filter: textFilter()},
-    {dataField:'head_quaters', text:'Head Quater', sort: true, filter: textFilter()},
-    {dataField:'slogan', text:'Slogan', sort: true, filter: textFilter()},
-    {dataField:'established', text:'Established Year', sort: true, filter: textFilter()}
+    {dataField:'email', text:'Email', sort: true, filter: textFilter()},
+    {dataField:'body', text:'Comement', sort: true, filter: textFilter()},
+    //{dataField:'established', text:'Established Year', sort: true, filter: textFilter()}
   ]
 
   // Pagination modifiers
@@ -38,9 +39,14 @@ function DataList() {
     },
   })
 
+  //URL list
+  // https://api.instantwebtools.net/v1/passenger?page=0&size=10
+  // https://api.instantwebtools.net/v1/airlines
+  // https://jsonplaceholder.typicode.com/comments
+
   // Fetch REST API URL
   useEffect(() => {
-    fetch('https://api.instantwebtools.net/v1/airlines')
+    fetch(`https://jsonplaceholder.typicode.com/comments?_limit=${limit}`)
     .then(response => response.json())
     .then(result => setUserList(result))
     .catch(error => console.log(error))
